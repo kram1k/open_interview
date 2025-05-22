@@ -1,4 +1,4 @@
-from core.logger import configure_logging
+from core import configure_logging
 
 import uvicorn
 from fastapi import FastAPI
