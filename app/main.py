@@ -1,4 +1,4 @@
-from core import configure_logging
+from core import configure_logging, config
 
 import uvicorn
 from fastapi import FastAPI
@@ -11,7 +11,6 @@ main_app = FastAPI()
 if __name__ == "__main__":
     uvicorn.run(
         "main:main_app",
-        host="0.0.0.0",
-        port=8000,
+        host=config.run.host,
         reload=True
     )
