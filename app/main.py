@@ -1,6 +1,9 @@
+from core.logger import configure_logging
+
 import uvicorn
 from fastapi import FastAPI
 
+configure_logging()
 
 main_app = FastAPI()
 
